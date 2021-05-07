@@ -1,0 +1,74 @@
+{
+    "contacts":[
+        {
+            "name": "Pedro",
+            "lastname": "Lopez",
+            "company": "Encora",
+            "phonenumber": "64798",
+            "email": "example@heroku.com"
+        },
+        {
+            "name": "Pedro",
+            "lastname": "Lopez",
+            "company": "Encora",
+            "phonenumber": "6589526389",
+            "email": "example2@heroku.com"
+        },
+        {
+            "name": "Pedro",
+            "lastname": "Lopez",
+            "company": "Encora",
+            "phonenumber": "6479856205",
+            "email": "example@heroku.com"
+        },
+        {
+            "name": "Laura Alejandra",
+            "lastname": "Lopez",
+            "company": "Encora",
+            "phonenumber": "6589526389",
+            "email": "example2@heroku.com"
+        },
+        {
+            "name": "Pedro",
+            "lastname": "Lopez",
+            "company": "Encora",
+            "phonenumber": "6479856205",
+            "email": "example@heroku.com"
+        },
+        {
+            "name": "Laura Alejandra",
+            "lastname": "Lopez",
+            "company": "Encora",
+            "phonenumber": "6589526389",
+            "email": "example2@heroku.com"
+        },
+        {
+            "name": "Pedro",
+            "lastname": "Lopez",
+            "company": "Encora",
+            "phonenumber": "6479856205",
+            "email": "example@heroku.com"
+        },
+        {
+            "name": "Laura Alejandra",
+            "lastname": "Lopez",
+            "company": "Encora",
+            "phonenumber": "6589526389",
+            "email": "example2@heroku.com"
+        },
+        {
+            "name": "Pedro",
+            "lastname": "Lopez",
+            "company": "Encora",
+            "phonenumber": "6479856205",
+            "email": "example@heroku.com"
+        },
+        {
+            "name": "Laura Alejandra",
+            "lastname": "Lopez",
+            "company": "Encora",
+            "phonenumber": "6589526389",
+            "email": "example2@heroku.com"
+        }
+    ]
+}
