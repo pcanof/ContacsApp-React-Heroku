@@ -1,23 +1,14 @@
 import { Component } from "react";
-import { contacts } from './contacts.json';
 
 class Cards extends Component{
         
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
-            contacts
+            contacts: props.contactsState
         };
     }
         
-
-    removeTodo(index) {
-        this.setState({
-          contacts: this.state.contacts.filter((e, i) => {
-            return i !== index
-          })
-        });
-      }
 
     render(){
         const contacts = this.state.contacts.map((contact, i) => {
@@ -35,7 +26,7 @@ class Cards extends Component{
                     <div className="card-footer">
                         <button
                             className="btn btn-danger"
-                            onClick={this.removeTodo.bind(this, i)}>
+                            onClick={this.props.onRemove(this.state.contacts)}>
                             Delete
                         </button>
                         <button

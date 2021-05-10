@@ -15,7 +15,7 @@ class CreateForm extends Component {
     console.log(this.state);
     this.props.onAddTodo(this.state);
     this.setState({
-
+      
     });
   }
 
@@ -30,11 +30,11 @@ class CreateForm extends Component {
   render() {
     return (
       <div className="card">
-        <form onSubmit={this.handleSubmit} className="card-body">
+        <form className="card-body">
           <div className="form-group">
             <input
               type="text"
-              name="Name"
+              name="name"
               className="form-control"
               value={this.state.name}
               onChange={this.handleInputChange}
@@ -44,7 +44,7 @@ class CreateForm extends Component {
           <div className="form-group">
             <input
               type="text"
-              name="Lastname"
+              name="lastname"
               className="form-control"
               value={this.state.lastname}
               onChange={this.handleInputChange}
@@ -54,7 +54,7 @@ class CreateForm extends Component {
           <div className="form-group">
             <input
               type="text"
-              name="Company"
+              name="company"
               className="form-control"
               value={this.state.company}
               onChange={this.handleInputChange}
@@ -64,7 +64,7 @@ class CreateForm extends Component {
           <div className="form-group">
             <input
                 type = "text"
-                name="Phone Number"
+                name="phonenumber"
                 className="form-control"
                 value={this.state.phonenumber}
                 onChange={this.handleInputChange}
@@ -74,14 +74,15 @@ class CreateForm extends Component {
           <div className="form-group">
             <input
                 type = "email"
-                name="Email"
+                name="email"
                 className="form-control"
                 value={this.state.email}
                 onChange={this.handleInputChange}
                 placeholder = "Email"
               />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary"
+          onClick={this.handleSubmit}>
             Create
           </button>
         </form>

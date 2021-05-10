@@ -12,7 +12,7 @@ class App extends Component{
   constructor() {
     super();
     this.state = {
-      contactsList: contacts
+      contacts
     }
     this.handleAddTodo = this.handleAddTodo.bind(this);
   }
@@ -21,20 +21,56 @@ class App extends Component{
   handleAddTodo(contact) {
     console.log(contact);
     this.setState({
-      contactsList: [...this.state.contactsList, contact]
+      contacts: [...this.state.contacts, contact]
     })
-    console.log(this.state.contactsList);
+    console.log(this.state.contacts);
+  }
+
+  removeContact(index) {
+    this.setState({
+      contacts: this.state.contacts.filter((e, i) => {
+        return i !== index
+      })
+    });
   }
 
   render() {
-    
+
+    const contacts = this.state.contacts.map((contact, i) => {
+      return(
+        <div className="col-md-4" key={i}>
+          <div className="card mt-4">
+            <div className="card-title text-center">
+                <h3>{contact.name} {contact.lastname}</h3>
+            </div>
+            <div className="card-body">
+              <p>Company: {contact.company}</p>
+              <p>Phone Number: {contact.phonenumber}</p>
+              <p>Email: {contact.email}</p>
+            </div>
+            <div className="card-footer">
+              <button
+                className="btn btn-danger"
+                onClick={this.removeContact.bind(this,i)}>
+                  Delete
+              </button>
+              <button
+                className="btn btn-primary">
+                  Edit
+              </button>
+            </div>
+          </div>
+        </div>
+      )
+    });
+
     return (
       <div className="App">
         <nav className="navbar navbar-dark bg-dark">
           <a className="navbar-brand" href="/">
             Contacts
             <span className="badge badge-pill badge-light ml-2">
-              {this.state.contactsList.length}
+              {this.state.contacts.length}
             </span>
           </a>
         </nav>
@@ -49,7 +85,7 @@ class App extends Component{
 
             <div className="col-md-15">
               <div className="row">
-                <Cards></Cards>
+                {contacts}
               </div>
             </div>
           </div>
